@@ -8,9 +8,11 @@
     box-sizing: border-box;
 }
 
+
+
 :root{
     --body-color: #efefef; 
-    --nav-color: #3BAFDA;
+    --nav-color: #fff;
     --bg-color: #fff;
 }
 
@@ -25,16 +27,23 @@ body {
     transition: background 0.3s;
 }
 
+
+
+
                                /*NAV*/ 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--nav-color);
-    padding: 5px 5%;
+    padding: 5px 1%; /*edited*/
     position: sticky;
     top: 0;
     z-index: 100;
+}
+             /*logo*/
+nav h1{
+    padding-right: 10px;
 }
 
 
@@ -48,15 +57,48 @@ nav {
     align-items: center;
 }
 
-.nav-left ul li{
+
+.nav-right ul li{
     list-style: none;
     display: inline-block;
 }
 
-.nav-left ul li img{
+.nav-right ul li img{
     width: 28px;
     margin: 0 15px;
 }
+
+.nav-right i{
+    font-size: 1rem;
+    padding-right: 6rem;
+}
+
+.nav-right ul {
+    padding-right: 139px;
+    align-content: center;
+}
+
+.nav-right  li:hover{
+    background-color: #f2f2f2;
+    border-bottom: 4px solid #1876f2;
+    /*transform: scale(1.2);*/
+    border-radius: 5px 5px 5px 5px;
+    height: 100%;
+}
+
+.nav-right i {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.fa-house, .fa-user-group, .fa-tv, .fa-shopify, .fa-gamepad {
+    color: #626262;
+}
+
 
 
 .nav-user-icon img {
@@ -69,9 +111,13 @@ nav {
     margin-left: 30px;
 }
 
+.user {
+    border-radius: 50%;
+}
+
 .search-box {
     background: #efefef;
-    width: 350px;
+    width: 263px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -86,10 +132,34 @@ nav {
 .search-box input {
     width: 100%;
     background: transparent;
-    padding: 10px;
+    padding: 8px;
     outline: none;
     border: 0;
+    font-size: 16px;
 }
+
+.icone1 {
+    width: 50px;
+}
+.bell-msg-menu {
+    position: absolute;
+    right: 4rem;
+}
+
+.bell-msg-menu ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.bell-msg-menu ul li{  /* espace between my images*/
+    padding-right: 20px;
+}
+
+.bell-msg-menu i {
+    color: #626262;
+}
+
 
 .online{
 position: relative;
@@ -110,26 +180,51 @@ position: relative;
 .container{
     display: flex;
     justify-content: space-between;
-    padding: 13px 5%;
+    padding: 13px 2%;
 }
 
 .left-sidebar{
     flex-basis: 25%;
     position: sticky;
     top: 70px;
-    align-self: flex-start ;
+    align-self: flex-start;
+    overflow: scroll;
 }
+
+/* See more--------------------------------------------------------------------------------------------------------------*/ 
+
+.see-more-icone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid #D2D6D9;
+    background: #D2D6D9;
+    width: 27px;
+    height: 26px;
+    margin-right: 7px;
+}
+
+.see-more-icone i {
+    color: black;
+}
+
+.see-more {
+    color: #626262;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
 
 .right-sidebar{
     flex-basis: 25%;
     position: sticky;
     top: 70px;
     align-self: flex-start ;
-    background: var(--bg-color);
     padding: 20px;
     border-radius: 4px;
     color: #626262;
-}
+  }
 
 .main-content{
     flex-basis: 47%;
@@ -139,13 +234,13 @@ position: relative;
     text-decoration: none;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 21px;
     color: #626262;
     width: fit-content;
 }
 
 .imp-links a img{
-    width: 25px;
+    width: 32px;
     margin-right: 15px;
 }
 
@@ -159,9 +254,10 @@ position: relative;
 
 
 .shortcut-links a img{
-    width: 40px;
+    width: 36px;
     border-radius: 4px;
     margin-right: 15px;
+    height: 36px;
 }
 
 .shortcut-links p{
@@ -170,6 +266,49 @@ position: relative;
     font-weight: 500;
 }
 
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar1{
+    display: flex;
+}
+
+.sidebar2{
+    display: flex;
+}
+
+.sidebar img{
+    height: 8rem;
+    width: 10rem;
+}
+
+
+
+.sidebar-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 16px;
+    font-size: 12px;
+}
+
+
+.sidebar-ajustment{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-column {
+    display: flex;
+    flex-direction: row;
+}
+    
+
+
+.sidebar-ajustment p {
+    font-size: 9px;
+}
 .sidebar-title{
     display: flex;
     align-items: center;
@@ -228,7 +367,8 @@ position: relative;
 }
 
 .sidebar-ads{
-    width: 100%;
+    width: 9rem;
+    height: 9rem;
     margin-bottom: 20px;
     border-radius: 4px;
 }
@@ -566,3 +706,15 @@ position: relative;
     background: #0a0a0a;
 }
 
+
+
+/* Media queries */ 
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .nav-left {
+
+    }
+    }
+    
